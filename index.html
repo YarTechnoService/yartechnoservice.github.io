@@ -1,39 +1,2316 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ЯрТехноСервис</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ТехФикс Про — Ремонт электроники с гарантией до 1 года</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsource-roboto@4.0.0/index.css">
 <style>
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#030708;color:#f5fafb;font:16px Arial,sans-serif}
-body:before{content:"";position:fixed;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(2,7,9,.94),rgba(2,7,9,.68)),url('tech-background.png') center/cover fixed}
-body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(rgba(0,235,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,235,255,.025) 1px,transparent 1px);background-size:55px 55px}
-a{color:inherit;text-decoration:none}.wrap{width:min(1180px,calc(100% - 30px));margin:auto}
-header{position:sticky;top:0;z-index:10;background:rgba(2,8,10,.88);backdrop-filter:blur(14px);border-bottom:1px solid #007f89}
-.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px}.brand img{width:54px;height:54px;object-fit:contain;filter:drop-shadow(0 0 12px #00eaff)}.brand b{display:block;font-size:21px}.brand small{color:#9cafb4;font-weight:bold}nav{display:flex;gap:28px}nav a:hover{color:#00efff}.call{border:1px solid #00efff;color:#00efff;padding:12px 20px;border-radius:999px;font-weight:bold}
-.hero{min-height:660px;display:flex;align-items:center;position:relative}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#03090b 0%,rgba(3,9,11,.84) 40%,rgba(3,9,11,.25) 80%,rgba(3,9,11,.8))}
-.hero .wrap{position:relative}.grid{display:grid;grid-template-columns:1fr 420px;gap:55px;align-items:center}.kicker{color:#00efff;text-transform:uppercase;letter-spacing:.14em;font-weight:bold;margin-bottom:15px}h1{font-size:clamp(52px,7vw,84px);line-height:.95;margin:0 0 10px;letter-spacing:-.04em}.hero h2{font-size:clamp(28px,4vw,42px);color:#00efff;margin:0 0 20px}.hero p{font-size:20px;line-height:1.5;color:#c4d1d5;max-width:590px}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.btn{padding:15px 24px;border-radius:13px;border:1px solid #00efff;font-weight:bold}.primary{background:#00efff;color:#001013}.secondary{color:#00efff;background:rgba(0,239,255,.05)}.hero-phone{font-size:28px;font-weight:900;margin-top:22px}.hero-phone:hover{color:#00efff}
-.logo-box{width:390px;height:390px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,rgba(0,239,255,.13),transparent 62%);border:1px solid rgba(0,239,255,.35);box-shadow:0 0 90px rgba(0,239,255,.1)}.logo-box img{width:285px;filter:drop-shadow(0 0 24px rgba(0,239,255,.6))}
-section{padding:85px 0}.dark{background:rgba(2,8,10,.9)}.title{text-align:center;margin-bottom:40px}.title h2{font-size:50px;margin:0 0 10px}.title p{color:#9cafb4}
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{padding:25px;min-height:180px;border:1px solid rgba(0,239,255,.18);border-radius:20px;background:rgba(3,13,16,.88);box-shadow:0 18px 55px rgba(0,0,0,.35);transition:.2s}.card:hover{transform:translateY(-5px);border-color:#00aeba}.ico{width:52px;height:52px;border:2px solid #00efff;border-radius:14px;color:#00efff;display:grid;place-items:center;font-size:25px;margin-bottom:16px}.card h3{margin:0 0 8px;font-size:20px}.card p{color:#9cafb4;margin:0;line-height:1.45}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid rgba(0,239,255,.2);border-radius:24px;overflow:hidden;background:rgba(2,12,15,.7)}.step{text-align:center;padding:38px 20px}.step+ .step{border-left:1px solid rgba(0,239,255,.18)}.num{width:60px;height:60px;border:2px solid #00efff;border-radius:50%;display:grid;place-items:center;margin:auto auto 16px;color:#00efff;font-weight:bold}.step h3{margin:0 0 7px}.step p{color:#9cafb4}.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:20px}.benefit{text-align:center;padding:22px;border-top:2px solid #00efff;background:rgba(0,239,255,.035)}.benefit b{display:block;margin-bottom:5px}.benefit span{color:#9cafb4}
-.contact{padding-top:45px}.contact-box{text-align:center;padding:55px 20px;border:1px solid rgba(0,239,255,.4);border-radius:28px;background:radial-gradient(circle at 50% 0,rgba(0,239,255,.12),transparent 55%),rgba(2,10,13,.94);box-shadow:0 20px 70px rgba(0,0,0,.55)}.contact-box h2{font-size:50px;margin:0 0 10px}.contact-box p{color:#9cafb4;font-size:18px}.contact-phone{font-size:clamp(30px,5vw,46px);font-weight:900;margin:22px 0 28px}.contact-phone:hover{color:#00efff}.hours{margin-top:20px;color:#d5dfe2}.hours b{color:#00efff}footer{padding:28px;text-align:center;border-top:1px solid rgba(0,239,255,.16);color:#829197}
-@media(max-width:900px){nav{display:none}.hero{padding:75px 0}.grid{grid-template-columns:1fr}.logo-box{margin:auto;width:300px;height:300px}.logo-box img{width:220px}.services{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:580px){.wrap{width:calc(100% - 22px)}.call{font-size:0;width:46px;height:46px;padding:0}.call:after{content:'☎';font-size:20px}.hero{padding:60px 0}.hero p{font-size:17px}.buttons{flex-direction:column}.btn{width:100%;text-align:center}.services,.steps,.benefits{grid-template-columns:1fr}.step+.step{border-left:0;border-top:1px solid rgba(0,239,255,.18)}.title h2{font-size:38px}.contact-box h2{font-size:38px}}
+  :root {
+    --bg-primary: #060b14;
+    --bg-secondary: #0a1120;
+    --bg-card: #0d1626;
+    --bg-card-hover: #111d33;
+    --accent: #00e5ff;
+    --accent-dark: #00b8d4;
+    --accent-glow: rgba(0, 229, 255, 0.3);
+    --accent-glow-strong: rgba(0, 229, 255, 0.6);
+    --text-primary: #e8f4f8;
+    --text-secondary: #8ba3b5;
+    --text-muted: #5a7a8a;
+    --border: rgba(0, 229, 255, 0.15);
+    --border-strong: rgba(0, 229, 255, 0.4);
+    --success: #00ff88;
+    --gradient-accent: linear-gradient(135deg, #00e5ff 0%, #00b8d4 50%, #0097a7 100%);
+    --gradient-bg: linear-gradient(180deg, #060b14 0%, #0a1628 50%, #060b14 100%);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  .circuit-bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.08;
+    background-image:
+      linear-gradient(var(--accent) 1px, transparent 1px),
+      linear-gradient(90deg, var(--accent) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .glow-orb {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .glow-orb-1 {
+    width: 600px; height: 600px;
+    background: rgba(0, 229, 255, 0.08);
+    top: -200px; right: -200px;
+    animation: float 20s ease-in-out infinite;
+  }
+
+  .glow-orb-2 {
+    width: 400px; height: 400px;
+    background: rgba(0, 184, 212, 0.06);
+    bottom: 20%; left: -100px;
+    animation: float 25s ease-in-out infinite reverse;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(30px, -40px); }
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: rgba(6, 11, 20, 0.9);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s ease;
+  }
+
+  .header.scrolled {
+    background: rgba(6, 11, 20, 0.98);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+
+  .logo-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 229, 255, 0.08);
+    border: 1px solid var(--border-strong);
+    box-shadow: 0 0 15px var(--accent-glow);
+  }
+
+  .logo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .logo-text {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+  }
+
+  .logo-text span {
+    color: var(--accent);
+  }
+
+  .header-phone {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 16px;
+    border: 1px solid var(--border-strong);
+    border-radius: 30px;
+    transition: all 0.3s ease;
+  }
+
+  .header-phone:hover {
+    background: var(--accent);
+    color: var(--bg-primary);
+    box-shadow: 0 0 20px var(--accent-glow);
+  }
+
+  .header-phone svg {
+    width: 18px; height: 18px;
+  }
+
+  .mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--accent);
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .mobile-menu-btn svg {
+    width: 28px; height: 28px;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 36px;
+    background: var(--gradient-accent);
+    color: var(--bg-primary);
+    font-size: 1.05rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 25px var(--accent-glow);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .btn-primary:hover::before { left: 100%; }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 40px var(--accent-glow-strong);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 32px;
+    background: transparent;
+    color: var(--accent);
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid var(--border-strong);
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .btn-secondary:hover {
+    background: rgba(0, 229, 255, 0.1);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  .btn-small {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+
+  section {
+    padding: 80px 0;
+    position: relative;
+  }
+
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+  }
+
+  .section-label::before {
+    content: '';
+    width: 30px; height: 2px;
+    background: var(--accent);
+  }
+
+  .section-title {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    color: var(--text-primary);
+  }
+
+  .section-title .highlight {
+    color: var(--accent);
+    position: relative;
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    line-height: 1.7;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .section-header .section-subtitle {
+    margin: 0 auto;
+  }
+
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background:
+      radial-gradient(ellipse at 20% 50%, rgba(0, 229, 255, 0.08) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 20%, rgba(0, 184, 212, 0.05) 0%, transparent 50%);
+    z-index: 0;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    background: rgba(0, 229, 255, 0.1);
+    border: 1px solid var(--border-strong);
+    border-radius: 30px;
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 24px;
+    animation: pulse-border 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse-border {
+    0%, 100% { border-color: var(--border-strong); }
+    50% { border-color: var(--accent); }
+  }
+
+  .hero-badge .dot {
+    width: 8px; height: 8px;
+    background: var(--success);
+    border-radius: 50%;
+    animation: blink 2s ease-in-out infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+  }
+
+  .hero-title .accent-line {
+    color: var(--accent);
+    display: block;
+    text-shadow: 0 0 40px var(--accent-glow);
+  }
+
+  .hero-description {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+    line-height: 1.7;
+    max-width: 520px;
+  }
+
+  .hero-cta-group {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  .hero-trust {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .trust-icon {
+    width: 40px; height: 40px;
+    background: rgba(0, 229, 255, 0.1);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+  }
+
+  .trust-icon svg {
+    width: 20px; height: 20px;
+  }
+
+  .trust-text {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+  }
+
+  .trust-text strong {
+    display: block;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+  }
+
+  .hero-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+
+  .hero-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1;
+  }
+
+  .hero-circuit {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    opacity: 0.15;
+  }
+
+  .hero-device {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    height: 200px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-strong);
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px var(--accent-glow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .hero-device::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 4px;
+    background: var(--gradient-accent);
+  }
+
+  .device-screen {
+    width: 85%;
+    height: 75%;
+    background: linear-gradient(135deg, #0a1628, #111d33);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .device-screen::after {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: linear-gradient(45deg, transparent 40%, rgba(0, 229, 255, 0.05) 50%, transparent 60%);
+    animation: screen-shine 4s ease-in-out infinite;
+  }
+
+  @keyframes screen-shine {
+    0% { transform: translateX(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) rotate(45deg); }
+  }
+
+  .device-icon {
+    color: var(--accent);
+    opacity: 0.6;
+  }
+
+  .device-icon svg {
+    width: 60px; height: 60px;
+  }
+
+  .floating-badge {
+    position: absolute;
+    background: var(--bg-card);
+    border: 1px solid var(--border-strong);
+    border-radius: 12px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    animation: float-badge 6s ease-in-out infinite;
+    z-index: 3;
+  }
+
+  .floating-badge:nth-child(2) { animation-delay: -2s; }
+  .floating-badge:nth-child(3) { animation-delay: -4s; }
+
+  @keyframes float-badge {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .fb-1 { top: 10%; right: 5%; }
+  .fb-2 { bottom: 20%; left: 0; }
+  .fb-3 { top: 50%; right: -5%; }
+
+  .fb-icon {
+    width: 36px; height: 36px;
+    background: rgba(0, 229, 255, 0.15);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    font-size: 1.1rem;
+  }
+
+  .fb-text {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+  }
+
+  .fb-text strong {
+    display: block;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+  }
+
+  .stats-bar {
+    padding: 40px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background: var(--bg-secondary);
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+  }
+
+  .stat-item {
+    position: relative;
+    padding: 20px;
+  }
+
+  .stat-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0; top: 20%;
+    height: 60%;
+    width: 1px;
+    background: var(--border);
+  }
+
+  .stat-number {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 8px;
+    text-shadow: 0 0 30px var(--accent-glow);
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+
+  .brands-section {
+    padding: 40px 0;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .brands-label {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+  }
+
+  .brands-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .brand-item {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    letter-spacing: 2px;
+  }
+
+  .brand-item:hover {
+    opacity: 1;
+    color: var(--accent);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+  }
+
+  .service-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 32px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+    background: var(--gradient-accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+
+  .service-card:hover::before { transform: scaleX(1); }
+
+  .service-card:hover {
+    border-color: var(--border-strong);
+    background: var(--bg-card-hover);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px var(--accent-glow);
+  }
+
+  .service-icon {
+    width: 64px; height: 64px;
+    background: rgba(0, 229, 255, 0.1);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: var(--accent);
+    transition: all 0.3s ease;
+  }
+
+  .service-card:hover .service-icon {
+    background: rgba(0, 229, 255, 0.2);
+    box-shadow: 0 0 20px var(--accent-glow);
+  }
+
+  .service-icon svg {
+    width: 32px; height: 32px;
+  }
+
+  .service-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+  }
+
+  .service-issues {
+    list-style: none;
+    margin-bottom: 20px;
+  }
+
+  .service-issues li {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    padding: 4px 0;
+    padding-left: 20px;
+    position: relative;
+  }
+
+  .service-issues li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .service-price {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+
+  .price-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  .price-value {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--accent);
+  }
+
+  .service-card .btn-secondary {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 12px 20px;
+  }
+
+  .steps-section {
+    background: var(--bg-secondary);
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    position: relative;
+  }
+
+  .steps-grid::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--border), var(--accent), var(--border));
+    z-index: 0;
+  }
+
+  .step-card {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 20px 10px;
+  }
+
+  .step-number {
+    width: 56px; height: 56px;
+    background: var(--bg-card);
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--accent);
+    box-shadow: 0 0 20px var(--accent-glow);
+    position: relative;
+  }
+
+  .step-number::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 1px solid var(--accent-glow);
+  }
+
+  .step-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+  }
+
+  .step-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  .step-note {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 30px;
+    background: rgba(0, 229, 255, 0.05);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1rem;
+    color: var(--text-primary);
+  }
+
+  .step-note-wrap {
+    text-align: center;
+  }
+
+  .step-note svg {
+    width: 24px; height: 24px;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .guarantees-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .guarantee-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 32px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+  }
+
+  .guarantee-card:hover {
+    border-color: var(--border-strong);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .guarantee-icon {
+    width: 56px; height: 56px;
+    min-width: 56px;
+    background: rgba(0, 229, 255, 0.1);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+  }
+
+  .guarantee-icon svg {
+    width: 28px; height: 28px;
+  }
+
+  .guarantee-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+  }
+
+  .guarantee-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .calculator-section {
+    background: var(--bg-secondary);
+  }
+
+  .calc-container {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 48px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .calc-container::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 4px;
+    background: var(--gradient-accent);
+  }
+
+  .calc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .calc-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .calc-step {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: rgba(0, 229, 255, 0.03);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
+
+  .calc-step.active {
+    border-color: var(--accent);
+    background: rgba(0, 229, 255, 0.08);
+  }
+
+  .calc-step-num {
+    width: 40px; height: 40px;
+    min-width: 40px;
+    background: var(--gradient-accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: var(--bg-primary);
+    font-size: 1rem;
+  }
+
+  .calc-step-text {
+    font-size: 1rem;
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+
+  .calc-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .form-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+  }
+
+  .form-input, .form-select {
+    padding: 14px 18px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    outline: none;
+  }
+
+  .form-input:focus, .form-select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+  }
+
+  .form-select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2300e5ff' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+  }
+
+  .form-select option {
+    background: var(--bg-card);
+    color: var(--text-primary);
+  }
+
+  .calc-discount {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    background: rgba(0, 255, 136, 0.08);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    border-radius: 10px;
+    font-size: 0.9rem;
+    color: var(--success);
+    font-weight: 600;
+  }
+
+  .calc-discount svg {
+    width: 20px; height: 20px;
+    flex-shrink: 0;
+  }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .review-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 28px;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .review-card:hover {
+    border-color: var(--border-strong);
+    transform: translateY(-4px);
+  }
+
+  .review-stars {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 16px;
+    color: #ffd700;
+    font-size: 1.1rem;
+  }
+
+  .review-text {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+
+  .review-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+
+  .review-avatar {
+    width: 44px; height: 44px;
+    background: var(--gradient-accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: var(--bg-primary);
+    font-size: 1.1rem;
+  }
+
+  .review-name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+  }
+
+  .review-device {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .review-badge {
+    position: absolute;
+    top: 20px; right: 20px;
+    padding: 4px 12px;
+    background: rgba(0, 255, 136, 0.1);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    color: var(--success);
+    font-weight: 600;
+  }
+
+  .faq-section {
+    background: var(--bg-secondary);
+  }
+
+  .faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .faq-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .faq-item.active {
+    border-color: var(--border-strong);
+  }
+
+  .faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    cursor: pointer;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+    gap: 16px;
+  }
+
+  .faq-question:hover {
+    color: var(--accent);
+  }
+
+  .faq-toggle {
+    width: 32px; height: 32px;
+    min-width: 32px;
+    background: rgba(0, 229, 255, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    transition: all 0.3s ease;
+  }
+
+  .faq-item.active .faq-toggle {
+    background: var(--accent);
+    color: var(--bg-primary);
+    transform: rotate(45deg);
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+  }
+
+  .faq-answer-inner {
+    padding: 0 24px 20px;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .faq-item.active .faq-answer {
+    max-height: 300px;
+  }
+
+  .final-cta {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .final-cta::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(0, 229, 255, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .final-cta .section-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    max-width: 700px;
+    margin: 0 auto 16px;
+  }
+
+  .final-cta .section-subtitle {
+    margin: 0 auto 32px;
+    max-width: 500px;
+  }
+
+  .final-cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+  }
+
+  .contact-item:hover {
+    border-color: var(--border-strong);
+    transform: translateY(-2px);
+  }
+
+  .contact-icon {
+    width: 44px; height: 44px;
+    min-width: 44px;
+    background: rgba(0, 229, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+  }
+
+  .contact-icon svg {
+    width: 22px; height: 22px;
+  }
+
+  .contact-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .contact-value {
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+
+  .footer {
+    padding: 40px 0;
+    border-top: 1px solid var(--border);
+    background: var(--bg-secondary);
+  }
+
+  .footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .footer-copy {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 24px;
+  }
+
+  .footer-links a {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-links a:hover {
+    color: var(--accent);
+  }
+
+  .modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .modal-overlay.active {
+    display: flex;
+  }
+
+  .modal {
+    background: var(--bg-card);
+    border: 1px solid var(--border-strong);
+    border-radius: 24px;
+    padding: 40px;
+    max-width: 480px;
+    width: 100%;
+    position: relative;
+    animation: modal-in 0.3s ease;
+  }
+
+  @keyframes modal-in {
+    from { opacity: 0; transform: scale(0.9) translateY(20px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 16px; right: 16px;
+    width: 36px; height: 36px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+  }
+
+  .modal-close:hover {
+    background: rgba(255, 0, 0, 0.1);
+    border-color: rgba(255, 0, 0, 0.3);
+    color: #ff4444;
+  }
+
+  .modal-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+  }
+
+  .modal-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+  }
+
+  .modal .form-group {
+    margin-bottom: 16px;
+  }
+
+  .modal .btn-primary {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .modal-note {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 12px;
+  }
+
+  .toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 16px 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--success);
+    border-radius: 12px;
+    color: var(--success);
+    font-weight: 600;
+    z-index: 3000;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .toast.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  @media (max-width: 1024px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero-visual { order: -1; }
+    .hero-image-container { max-width: 400px; margin: 0 auto; }
+    .steps-grid { grid-template-columns: repeat(3, 1fr); }
+    .steps-grid::before { display: none; }
+    .calc-grid { grid-template-columns: 1fr; }
+    .reviews-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 768px) {
+    section { padding: 60px 0; }
+    .header-phone { display: none; }
+    .mobile-menu-btn { display: block; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .stat-item:not(:last-child)::after { display: none; }
+    .services-grid { grid-template-columns: 1fr; }
+    .steps-grid { grid-template-columns: 1fr 1fr; }
+    .guarantees-grid { grid-template-columns: 1fr; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .calc-container { padding: 28px; }
+    .hero-trust { gap: 16px; }
+    .hero-cta-group { flex-direction: column; }
+    .hero-cta-group .btn-primary,
+    .hero-cta-group .btn-secondary { width: 100%; }
+    .floating-badge { display: none; }
+    .footer-inner { flex-direction: column; text-align: center; }
+  }
+
+  @media (max-width: 480px) {
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+    .steps-grid { grid-template-columns: 1fr; }
+    .hero-title { font-size: 1.8rem; }
+    .brands-grid { gap: 20px; }
+    .brand-item { font-size: 1rem; }
+  }
+
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+  }
+
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .mobile-nav {
+    position: fixed;
+    top: 0; right: -100%;
+    width: 280px;
+    height: 100%;
+    background: var(--bg-card);
+    border-left: 1px solid var(--border);
+    z-index: 1500;
+    padding: 80px 24px 24px;
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .mobile-nav.active { right: 0; }
+
+  .mobile-nav a {
+    display: block;
+    padding: 12px 0;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-bottom: 1px solid var(--border);
+    transition: color 0.3s ease;
+  }
+
+  .mobile-nav a:hover { color: var(--accent); }
+
+  .mobile-nav-close {
+    position: absolute;
+    top: 20px; right: 20px;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .mobile-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1400;
+    display: none;
+  }
+
+  .mobile-overlay.active { display: block; }
 </style>
 </head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="#"><img src="logo.png"><span><b>Владимир</b><small>Частный мастер</small></span></a><nav><a href="#services">Услуги</a><a href="#how">Как работаем</a><a href="#benefits">Преимущества</a><a href="#contact">Контакты</a></nav><a class="call" href="tel:+79080355553">☎ +7 (908) 035-55-53</a></div></header>
-<section class="hero"><div class="wrap"><div class="grid"><div><div class="kicker">Сервисный центр · выезд к клиенту</div><h1>Владимир</h1><h2>Частный мастер</h2><p>Быстрый и надёжный ремонт вашей техники</p><div class="buttons"><a class="btn primary" href="tel:+79080355553">☎ &nbsp;Позвонить мастеру</a><a class="btn secondary" href="#services">Все услуги</a></div><div class="hero-phone"><a href="tel:+79080355553">+7 (908) 035-55-53</a></div></div><div class="logo-box"><img src="logo.png" alt="Логотип"></div></div></div></section>
-<section id="services"><div class="wrap"><div class="title"><h2>Услуги</h2><p>Ремонт и техническое обслуживание</p></div><div class="services">
-<article class="card"><div class="ico">💻</div><h3>Ремонт компьютеров и ноутбуков</h3><p>Диагностика, ремонт, настройка и обслуживание.</p></article>
-<article class="card"><div class="ico">📺</div><h3>Ремонт телевизоров и мониторов</h3><p>Поиск неисправностей и восстановление техники.</p></article>
-<article class="card"><div class="ico">⚡</div><h3>Электрик: монтаж и ремонт</h3><p>Монтажные и ремонтные работы по электрике.</p></article>
-<article class="card"><div class="ico">📹</div><h3>Видеонаблюдение: монтаж и ремонт</h3><p>Установка, подключение, настройка и ремонт.</p></article>
-<article class="card"><div class="ico">🌍</div><h3>Локальные сети, Wi‑Fi, интернет</h3><p>Настройка роутеров, сети и подключения оборудования.</p></article>
-<article class="card"><div class="ico">📟</div><h3>Бытовая техника</h3><p>Диагностика и ремонт бытовой техники.</p></article>
-</div></div></section>
-<section class="dark" id="how"><div class="wrap"><div class="title"><h2>Как работаем</h2><p>Три простых шага</p></div><div class="steps"><div class="step"><div class="num">01</div><h3>Выезд на дом</h3><p>Удобно и быстро приезжаем к вам.</p></div><div class="step"><div class="num">02</div><h3>Диагностика бесплатно</h3><p>Определяем проблему и согласовываем работу.</p></div><div class="step"><div class="num">03</div><h3>Гарантия на работы</h3><p>Уверенность в результате после ремонта.</p></div></div>
-<div class="benefits" id="benefits"><div class="benefit"><b>Опыт и профессионализм</b><span>Аккуратная работа и понятные решения</span></div><div class="benefit"><b>Оперативность</b><span>Стараемся решить проблему в кратчайшие сроки</span></div><div class="benefit"><b>Честные цены</b><span>Без скрытых платежей</span></div></div></div></section>
-<section class="contact" id="contact"><div class="wrap"><div class="contact-box"><h2>Нужен мастер?</h2><p>Позвоните прямо сейчас — обсудим вашу задачу.</p><div class="contact-phone"><a href="tel:+79080355553">+7 (908) 035-55-53</a></div><a class="btn primary" href="tel:+79080355553">Позвонить сейчас</a><div class="hours"><b>Пн–Вс, 09:00–21:00</b><br>Наличный/безналичный расчёт · Гарантия</div></div></div></section>
-<footer>Владимир — Частный мастер</footer>
-</body></html>
+
+<div class="circuit-bg"></div>
+<div class="glow-orb glow-orb-1"></div>
+<div class="glow-orb glow-orb-2"></div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <img src="https://i.ibb.co/HDh36x1Z/image.png" alt="ТехФикс Про — логотип сервисного центра">
+      </div>
+      <div class="logo-text">ТЕХ<span>ФИКС</span> ПРО</div>
+    </a>
+    <a href="tel:+79080355553" class="header-phone">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+      +7 (908) 035-55-53
+    </a>
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- MOBILE NAV -->
+<div class="mobile-overlay" id="mobileOverlay" onclick="toggleMobileMenu()"></div>
+<nav class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" onclick="toggleMobileMenu()">✕</button>
+  <a href="#services" onclick="toggleMobileMenu()">Услуги</a>
+  <a href="#how" onclick="toggleMobileMenu()">Как работаем</a>
+  <a href="#guarantees" onclick="toggleMobileMenu()">Гарантии</a>
+  <a href="#calculator" onclick="toggleMobileMenu()">Рассчитать цену</a>
+  <a href="#reviews" onclick="toggleMobileMenu()">Отзывы</a>
+  <a href="#faq" onclick="toggleMobileMenu()">Вопросы</a>
+  <a href="tel:+79080355553" style="color: var(--accent);">+7 (908) 035-55-53</a>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Работаем сегодня — выезд за 30 минут
+        </div>
+        <h1 class="hero-title">
+          Ремонт техники
+          <span class="accent-line">с гарантией до 1 года</span>
+        </h1>
+        <p class="hero-description">
+          Бесплатная диагностика и выезд мастера. Фиксируем цену до начала работ — никаких скрытых доплат. Ваши данные под защитой.
+        </p>
+        <div class="hero-cta-group">
+          <button class="btn-primary" onclick="openModal()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+            Рассчитать стоимость ремонта
+          </button>
+          <a href="tel:+79080355553" class="btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            Позвонить сейчас
+          </a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="trust-text">
+              <strong>Гарантия 12 мес.</strong>
+              На работу и запчасти
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div class="trust-text">
+              <strong>Ремонт от 1 дня</strong>
+              Срочный — за 2 часа
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div class="trust-text">
+              <strong>12 000+ клиентов</strong>
+              Рейтинг 4.9 из 5
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-container">
+          <svg class="hero-circuit" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 200 H150 V100 H250 V200 H350" stroke="#00e5ff" stroke-width="1" opacity="0.5"/>
+            <path d="M100 50 V150 H200 V250 H300 V350" stroke="#00e5ff" stroke-width="1" opacity="0.3"/>
+            <circle cx="150" cy="100" r="4" fill="#00e5ff" opacity="0.6"/>
+            <circle cx="250" cy="200" r="4" fill="#00e5ff" opacity="0.6"/>
+            <circle cx="200" cy="250" r="4" fill="#00e5ff" opacity="0.6"/>
+            <circle cx="300" cy="350" r="4" fill="#00e5ff" opacity="0.6"/>
+            <rect x="170" y="170" width="60" height="60" rx="8" stroke="#00e5ff" stroke-width="1" opacity="0.4"/>
+            <line x1="200" y1="170" x2="200" y2="100" stroke="#00e5ff" stroke-width="1" opacity="0.3"/>
+            <line x1="200" y1="230" x2="200" y2="300" stroke="#00e5ff" stroke-width="1" opacity="0.3"/>
+            <line x1="170" y1="200" x2="100" y2="200" stroke="#00e5ff" stroke-width="1" opacity="0.3"/>
+            <line x1="230" y1="200" x2="300" y2="200" stroke="#00e5ff" stroke-width="1" opacity="0.3"/>
+          </svg>
+
+          <div class="hero-device">
+            <div class="device-screen">
+              <div class="device-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="floating-badge fb-1">
+            <div class="fb-icon">✓</div>
+            <div class="fb-text">
+              <strong>Диагностика</strong>
+              Бесплатно
+            </div>
+          </div>
+          <div class="floating-badge fb-2">
+            <div class="fb-icon">⚡</div>
+            <div class="fb-text">
+              <strong>Срочный ремонт</strong>
+              От 2 часов
+            </div>
+          </div>
+          <div class="floating-badge fb-3">
+            <div class="fb-icon"></div>
+            <div class="fb-text">
+              <strong>Данные защищены</strong>
+              NDA при необходимости
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item fade-up">
+        <div class="stat-number" data-target="8">0</div>
+        <div class="stat-label">лет на рынке</div>
+      </div>
+      <div class="stat-item fade-up">
+        <div class="stat-number" data-target="15000">0</div>
+        <div class="stat-label">устройств отремонтировано</div>
+      </div>
+      <div class="stat-item fade-up">
+        <div class="stat-number" data-target="24">0</div>
+        <div class="stat-label">мастера в штате</div>
+      </div>
+      <div class="stat-item fade-up">
+        <div class="stat-number" data-target="365">0</div>
+        <div class="stat-label">дней гарантии</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BRANDS -->
+<div class="brands-section">
+  <div class="container">
+    <div class="brands-label">Ремонтируем технику всех ведущих брендов</div>
+    <div class="brands-grid">
+      <div class="brand-item">APPLE</div>
+      <div class="brand-item">SAMSUNG</div>
+      <div class="brand-item">LG</div>
+      <div class="brand-item">HP</div>
+      <div class="brand-item">DELL</div>
+      <div class="brand-item">ASUS</div>
+      <div class="brand-item">LENOVO</div>
+      <div class="brand-item">SONY</div>
+      <div class="brand-item">XIAOMI</div>
+      <div class="brand-item">HUAWEI</div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">Каталог услуг</div>
+      <h2 class="section-title">Что мы <span class="highlight">чиним</span></h2>
+      <p class="section-subtitle">Ремонтируем любую электронику — от смартфона до промышленного оборудования. Точную цену назовём после бесплатной диагностики.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M2 17h20M8 21h8"/></svg>
+        </div>
+        <h3 class="service-title">Ноутбуки</h3>
+        <ul class="service-issues">
+          <li>Замена матрицы и клавиатуры</li>
+          <li>Ремонт материнской платы</li>
+          <li>Чистка от пыли и замена термопасты</li>
+          <li>Восстановление после залития</li>
+          <li>Замена SSD/HDD, апгрейд RAM</li>
+        </ul>
+        <div class="service-price">
+          <span class="price-label">Ремонт от:</span>
+          <span class="price-value">1 500 ₽</span>
+        </div>
+        <button class="btn-secondary btn-small" onclick="openModal('Ноутбук')">Узнать цену для ноутбука</button>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="6" y="14" width="12" height="8" rx="1"/><path d="M10 22h4"/></svg>
+        </div>
+        <h3 class="service-title">Компьютеры и моноблоки</h3>
+        <ul class="service-issues">
+          <li>Сборка и модернизация ПК</li>
+          <li>Замена блока питания, видеокарты</li>
+          <li>Удаление вирусов, настройка ОС</li>
+          <li>Восстановление данных</li>
+          <li>Ремонт моноблоков iMac, Lenovo</li>
+        </ul>
+        <div class="service-price">
+          <span class="price-label">Ремонт от:</span>
+          <span class="price-value">1 200 ₽</span>
+        </div>
+        <button class="btn-secondary btn-small" onclick="openModal('Компьютер')">Узнать цену для ПК</button>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3 class="service-title">Телевизоры</h3>
+        <ul class="service-issues">
+          <li>Замена подсветки и матрицы</li>
+          <li>Ремонт блока питания и T-CON</li>
+          <li>Настройка Smart TV и Wi-Fi</li>
+          <li>Замена разъёмов HDMI</li>
+          <li>Ремонт Samsung, LG, Sony, Philips</li>
+        </ul>
+        <div class="service-price">
+          <span class="price-label">Ремонт от:</span>
+          <span class="price-value">2 000 ₽</span>
+        </div>
+        <button class="btn-secondary btn-small" onclick="openModal('Телевизор')">Узнать цену для ТВ</button>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+        </div>
+        <h3 class="service-title">Смартфоны и планшеты</h3>
+        <ul class="service-issues">
+          <li>Замена экрана и стекла</li>
+          <li>Замена батареи и разъёма зарядки</li>
+          <li>Ремонт после попадания воды</li>
+          <li>Восстановление Face ID / Touch ID</li>
+          <li>Разблокировка и перенос данных</li>
+        </ul>
+        <div class="service-price">
+          <span class="price-label">Ремонт от:</span>
+          <span class="price-value">990 ₽</span>
+        </div>
+        <button class="btn-secondary btn-small" onclick="openModal('Смартфон')">Узнать цену для смартфона</button>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><circle cx="12" cy="14" r="4"/><path d="M12 10v-2"/></svg>
+        </div>
+        <h3 class="service-title">Бытовая техника</h3>
+        <ul class="service-issues">
+          <li>Ремонт стиральных и посудомоечных машин</li>
+          <li>Диагностика холодильников</li>
+          <li>Ремонт микроволновок и духовок</li>
+          <li>Замена ТЭНов, насосов, модулей</li>
+          <li>Выезд мастера на дом</li>
+        </ul>
+        <div class="service-price">
+          <span class="price-label">Ремонт от:</span>
+          <span class="price-value">1 800 ₽</span>
+        </div>
+        <button class="btn-secondary btn-small" onclick="openModal('Бытовая техника')">Узнать цену</button>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        </div>
+        <h3 class="service-title">Восстановление данных</h3>
+        <ul class="service-issues">
+          <li>Восстановление с HDD, SSD, флешек</li>
+          <li>Спасение данных с RAID-массивов</li>
+          <li>Извлечение информации с повреждённых носителей</li>
+          <li>Резервное копирование и миграция</li>
+          <li>Конфиденциальность гарантирована</li>
+        </ul>
+        <div class="service-price">
+          <span class="price-label">Ремонт от:</span>
+          <span class="price-value">2 500 ₽</span>
+        </div>
+        <button class="btn-secondary btn-small" onclick="openModal('Восстановление данных')">Узнать цену</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE WORK -->
+<section class="steps-section" id="how">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">Процесс работы</div>
+      <h2 class="section-title">Как мы <span class="highlight">работаем</span></h2>
+      <p class="section-subtitle">Прозрачный процесс без сюрпризов. Вы знаете точную цену до начала ремонта.</p>
+    </div>
+    <div class="steps-grid fade-up">
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <div class="step-title">Заявка</div>
+        <div class="step-desc">Оставьте заявку на сайте или позвоните. Опишите проблему — мы подскажем примерную стоимость.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <div class="step-title">Диагностика</div>
+        <div class="step-desc">Бесплатно определим неисправность в течение 30 минут. Без обязательств с вашей стороны.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <div class="step-title">Согласование</div>
+        <div class="step-desc">Называем точную цену и сроки. Фиксируем в договоре — сумма не изменится.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-number">4</div>
+        <div class="step-title">Ремонт</div>
+        <div class="step-desc">Используем оригинальные запчасти. Выполняем работу в согласованные сроки.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-number">5</div>
+        <div class="step-title">Выдача</div>
+        <div class="step-desc">Проверяем устройство вместе с вами. Выдаём чек и гарантийный талон.</div>
+      </div>
+    </div>
+    <div class="step-note-wrap fade-up">
+      <div class="step-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span><strong>Цена не меняется после согласования</strong> — это зафиксировано в договоре. Никаких «дополнительных работ» без вашего согласия.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEES -->
+<section id="guarantees">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">Почему нам доверяют</div>
+      <h2 class="section-title">Наши <span class="highlight">гарантии</span></h2>
+      <p class="section-subtitle">Мы снимаем все ваши сомнения. Работаем честно, потому что дорожим репутацией.</p>
+    </div>
+    <div class="guarantees-grid">
+      <div class="guarantee-card fade-up">
+        <div class="guarantee-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <div>
+          <h3 class="guarantee-title">Не починим — не возьмём денег</h3>
+          <p class="guarantee-desc">Если ремонт невозможен или экономически нецелесообразен — вы не платите ни копейки. Диагностика всегда бесплатна.</p>
+        </div>
+      </div>
+      <div class="guarantee-card fade-up">
+        <div class="guarantee-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <div>
+          <h3 class="guarantee-title">Гарантия до 1 года на всё</h3>
+          <p class="guarantee-desc">На выполненные работы и установленные запчасти. Если что-то пойдёт не так — исправим бесплатно в течение гарантийного срока.</p>
+        </div>
+      </div>
+      <div class="guarantee-card fade-up">
+        <div class="guarantee-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <div>
+          <h3 class="guarantee-title">Юридический договор и чек</h3>
+          <p class="guarantee-desc">Официальное оформление каждого ремонта. Вы получаете акт выполненных работ, чек и гарантийный талон.</p>
+        </div>
+      </div>
+      <div class="guarantee-card fade-up">
+        <div class="guarantee-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        </div>
+        <div>
+          <h3 class="guarantee-title">Конфиденциальность ваших данных</h3>
+          <p class="guarantee-desc">Ваши файлы, фото и переписки остаются при вас. При необходимости подписываем NDA. Данные не копируются и не передаются.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="calculator-section" id="calculator">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">Узнайте цену за 30 секунд</div>
+      <h2 class="section-title">Рассчитайте стоимость <span class="highlight">ремонта</span></h2>
+      <p class="section-subtitle">Ответьте на 3 вопроса и получите примерную стоимость + скидку 10% на первый ремонт.</p>
+    </div>
+    <div class="calc-container fade-up">
+      <div class="calc-grid">
+        <div class="calc-steps">
+          <div class="calc-step active">
+            <div class="calc-step-num">1</div>
+            <div class="calc-step-text">Выберите тип устройства</div>
+          </div>
+          <div class="calc-step">
+            <div class="calc-step-num">2</div>
+            <div class="calc-step-text">Опишите симптомы поломки</div>
+          </div>
+          <div class="calc-step">
+            <div class="calc-step-num">3</div>
+            <div class="calc-step-text">Получите расчёт и скидку 10%</div>
+          </div>
+          <div class="calc-discount">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+            Скидка 10% действует при заявке с сайта сегодня
+          </div>
+        </div>
+        <form class="calc-form" onsubmit="submitCalcForm(event)">
+          <div class="form-group">
+            <label class="form-label">Тип устройства</label>
+            <select class="form-select" required>
+              <option value="">Выберите устройство...</option>
+              <option>Ноутбук</option>
+              <option>Компьютер / Моноблок</option>
+              <option>Телевизор</option>
+              <option>Смартфон</option>
+              <option>Планшет</option>
+              <option>Бытовая техника</option>
+              <option>Другое</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Что случилось?</label>
+            <select class="form-select" required>
+              <option value="">Выберите симптом...</option>
+              <option>Не включается</option>
+              <option>Разбит экран / матрица</option>
+              <option>Быстро разряжается</option>
+              <option>Греется / шумит</option>
+              <option>Попала вода</option>
+              <option>Не заряжается</option>
+              <option>Тормозит / зависает</option>
+              <option>Другая проблема</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Ваше имя</label>
+            <input type="text" class="form-input" placeholder="Как к вам обращаться?" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Телефон</label>
+            <input type="tel" class="form-input" placeholder="+7 (___) ___-__-__" required>
+          </div>
+          <button type="submit" class="btn-primary" style="width: 100%;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            Получить расчёт и скидку 10%
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">Отзывы клиентов</div>
+      <h2 class="section-title">Нам <span class="highlight">доверяют</span></h2>
+      <p class="section-subtitle">Реальные истории наших клиентов. Более 12 000 довольных пользователей.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card fade-up">
+        <div class="review-badge">✓ Проверено</div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">«Разлил кофе на MacBook — думал, конец. Ребята спасли все данные и починили за 2 дня. Цена оказалась даже ниже, чем озвучили по телефону. Рекомендую!»</p>
+        <div class="review-author">
+          <div class="review-avatar">АК</div>
+          <div>
+            <div class="review-name">Алексей К.</div>
+            <div class="review-device">MacBook Pro 14" · Замена платы</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card fade-up">
+        <div class="review-badge">✓ Проверено</div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">«Телевизор Samsung перестал показывать — чёрный экран. Приехал мастер, диагностировал за 20 минут, заменил подсветку в тот же день. Работает как новый!»</p>
+        <div class="review-author">
+          <div class="review-avatar">МП</div>
+          <div>
+            <div class="review-name">Марина П.</div>
+            <div class="review-device">Samsung 55" · Замена подсветки</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card fade-up">
+        <div class="review-badge">✓ Проверено</div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">«Уронил iPhone, разбилось стекло. Сделали за 40 минут, пока я пил кофе. Оригинальный экран, всё работает идеально. Гарантию дали на год.»</p>
+        <div class="review-author">
+          <div class="review-avatar">ДС</div>
+          <div>
+            <div class="review-name">Дмитрий С.</div>
+            <div class="review-device">iPhone 14 · Замена экрана</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">Частые вопросы</div>
+      <h2 class="section-title">Отвечаем на <span class="highlight">сомнения</span></h2>
+      <p class="section-subtitle">Если вашего вопроса нет здесь — позвоните, ответим за 1 минуту.</p>
+    </div>
+    <div class="faq-list fade-up">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Используете ли вы оригинальные запчасти?</span>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Да, мы работаем только с оригинальными запчастями и сертифицированными аналогами премиум-класса. Перед установкой показываем упаковку и серийный номер. На все запчасти действует гарантия производителя.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Сколько времени занимает ремонт?</span>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Большинство ремонтов выполняем за 1–3 дня. Срочный ремонт (замена экрана смартфона, чистка ноутбука) — от 2 часов. Точные сроки называем после диагностики и фиксируем в договоре.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Можно ли приехать без записи?</span>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Да, вы можете приехать в наш сервисный центр без предварительной записи в рабочие часы. Однако рекомендуем записаться — так мы гарантируем, что мастер будет свободен и диагностика пройдёт без ожидания.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Сохранятся ли мои файлы и данные?</span>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">В 95% случаев данные сохраняются. Перед ремонтом мы делаем резервную копию (с вашего согласия). При сложных случаях восстановления данных используем специализированное оборудование. Конфиденциальность гарантирована — при необходимости подписываем NDA.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Что если ремонт окажется дороже нового устройства?</span>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">После бесплатной диагностики мы честно скажем, целесообразен ли ремонт. Если стоимость ремонта превышает 70% от цены нового устройства — мы предупредим вас и предложим альтернативы. Вы не платите за диагностику, даже если откажетесь от ремонта.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="contact">
+  <div class="container">
+    <div class="fade-up">
+      <div class="section-label" style="justify-content: center;">Не откладывайте ремонт</div>
+      <h2 class="section-title">Техника ломается в самый <span class="highlight">неподходящий момент</span></h2>
+      <p class="section-subtitle">Чем раньше обратитесь — тем дешевле ремонт. Оставьте заявку сейчас и получите бесплатную диагностику + скидку 10%.</p>
+      <div class="final-cta-buttons">
+        <button class="btn-primary" onclick="openModal()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Вызвать мастера на бесплатную диагностику
+        </button>
+      </div>
+      <div class="contact-grid">
+        <a href="tel:+79080355553" class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Телефон</div>
+            <div class="contact-value">+7 (908) 035-55-53</div>
+          </div>
+        </a>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Адрес</div>
+            <div class="contact-value">ул. Техническая, 42</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Часы работы</div>
+            <div class="contact-value">Ежедневно 9:00–21:00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-copy">© 2024 ТехФикс Про. Все права защищены. ИНН 1234567890</div>
+      <div class="footer-links">
+        <a href="#">Политика конфиденциальности</a>
+        <a href="#">Договор оферты</a>
+        <a href="#">WhatsApp</a>
+        <a href="#">Telegram</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h3 class="modal-title">Бесплатная диагностика</h3>
+    <p class="modal-subtitle">Оставьте заявку — перезвоним за 5 минут и назовём точную стоимость ремонта.</p>
+    <form onsubmit="submitModalForm(event)">
+      <div class="form-group">
+        <label class="form-label">Ваше имя</label>
+        <input type="text" class="form-input" placeholder="Как к вам обращаться?" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Телефон</label>
+        <input type="tel" class="form-input" placeholder="+7 (___) ___-__-__" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Что сломалось?</label>
+        <select class="form-select" id="modalDevice">
+          <option value="">Выберите устройство...</option>
+          <option>Ноутбук</option>
+          <option>Компьютер / Моноблок</option>
+          <option>Телевизор</option>
+          <option>Смартфон</option>
+          <option>Планшет</option>
+          <option>Бытовая техника</option>
+          <option>Другое</option>
+        </select>
+      </div>
+      <button type="submit" class="btn-primary">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        Получить расчёт стоимости
+      </button>
+    </form>
+    <p class="modal-note"> Ваши данные защищены. Не передаём третьим лицам.</p>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+  <span id="toastText">Заявка отправлена!</span>
+</div>
+
+<script>
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  function toggleMobileMenu() {
+    document.getElementById('mobileNav').classList.toggle('active');
+    document.getElementById('mobileOverlay').classList.toggle('active');
+  }
+
+  function openModal(device) {
+    document.getElementById('modalOverlay').classList.add('active');
+    if (device) {
+      const select = document.getElementById('modalDevice');
+      for (let option of select.options) {
+        if (option.text === device) {
+          option.selected = true;
+          break;
+        }
+      }
+    }
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    document.getElementById('modalOverlay').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function closeModalOutside(e) {
+    if (e.target === e.currentTarget) closeModal();
+  }
+
+  function showToast(text) {
+    const toast = document.getElementById('toast');
+    document.getElementById('toastText').textContent = text;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 4000);
+  }
+
+  function submitModalForm(e) {
+    e.preventDefault();
+    closeModal();
+    showToast('✓ Заявка отправлена! Перезвоним за 5 минут.');
+  }
+
+  function submitCalcForm(e) {
+    e.preventDefault();
+    showToast('✓ Расчёт готов! Перезвоним в течение 5 минут.');
+  }
+
+  function toggleFaq(el) {
+    const item = el.parentElement;
+    const wasActive = item.classList.contains('active');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+    if (!wasActive) item.classList.add('active');
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.dataset.target);
+        let current = 0;
+        const increment = target / 60;
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          if (target >= 1000) {
+            el.textContent = Math.floor(current).toLocaleString('ru-RU') + '+';
+          } else {
+            el.textContent = Math.floor(current) + (target === 365 ? '' : '+');
+          }
+        }, 25);
+        counterObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('.stat-number').forEach(el => counterObserver.observe(el));
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+</script>
+</body>
+</html>
